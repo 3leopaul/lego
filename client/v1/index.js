@@ -530,6 +530,21 @@ sealedCamera = {
 
 // 3. Update `camera` property with `favorite` to true WITHOUT changing sealedCamera properties
 
+// 1. Log `sealedCamera` and `camera` variables
+console.log('sealedCamera (first attempt):', sealedCamera);
+console.log('camera (first attempt):', camera);
+
+// 2. What do you notice?
+// Notice: Both have favorite: true! This is because camera = sealedCamera creates a reference, not a copy.
+// Both variables point to the same object in memory.
+
+// 3. Update `camera` property with `favorite` to true WITHOUT changing sealedCamera properties
+// We need to create a proper copy using the spread operator
+camera = { ...sealedCamera, favorite: true };
+
+console.log('sealedCamera (after proper copy):', sealedCamera);
+console.log('camera (after proper copy):', camera);
+
 
 // 🎯 TODO 11: Compute the profitability
 // From a specific deal called `deal`
