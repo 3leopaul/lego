@@ -30,6 +30,9 @@ console.log(MY_FAVORITE_DEALERS[0]);
 // 1. Create a new variable and assign it the link of the lego set with the highest reduction I can find on these 2 websites
 // 2. Log the variable
 
+const highestReductionLink = 'https://www.avenuedelabrique.com/lego-vidiyo/43105-party-llama-beatbox/p6648';
+console.log('Highest reduction deal:', highestReductionLink);
+
 /**
  * 🧱
  * Easy 😁?
@@ -42,6 +45,7 @@ console.log(MY_FAVORITE_DEALERS[0]);
 // 🎯 TODO 2: Number of deals
 // 1. Create a variable and assign it the number of deals
 // 2. Log the variable
+
 
 // 🎯 TODO 3: Website name
 // 1. Create a variable and assign it the list of shopping community name only
@@ -435,7 +439,7 @@ sealedCamera = {
 // 🎯 TODO 11: Compute the profitability
 // From a specific deal called `deal`
 const deal = {
-  'title':  'La caméra Hommage à Walt Disney',
+  'title': 'La caméra Hommage à Walt Disney',
   'retail': 75.98,
   'price': 56.98,
   'legoId': '43230'
