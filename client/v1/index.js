@@ -97,6 +97,11 @@ console.log('Deals with discount between 50% and 75%:', dealsWithDiscountBetween
 // 1. Determine the average percentage discount of the deals
 // 2. Log the average
 
+const dealsWithDiscount = deals.filter(deal => deal.discount !== null && deal.discount !== undefined);
+const totalDiscount = dealsWithDiscount.reduce((sum, deal) => sum + deal.discount, 0);
+const averageDiscount = totalDiscount / dealsWithDiscount.length;
+console.log('Average percentage discount:', averageDiscount.toFixed(2) + '%');
+
 /**
  * 🏎
  * We are almost done with the `deals` variable
