@@ -157,6 +157,17 @@ console.log('Communities with deals sorted by price (highest to lowest):', commu
 // 1. For each set, sort the deals by date, from old to recent
 // 2. Log the sort
 
+const communitiesSortedByDate = Object.keys(communities).reduce((acc, communityName) => {
+  acc[communityName] = communities[communityName].slice().sort((a, b) => {
+    const dateA = new Date(a.published);
+    const dateB = new Date(b.published);
+    return dateA - dateB; // Old to recent (ascending order)
+  });
+  return acc;
+}, {});
+
+console.log('Communities with deals sorted by date (old to recent):', communitiesSortedByDate);
+
 
 /**
  * 🧥
