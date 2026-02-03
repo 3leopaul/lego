@@ -580,3 +580,7 @@ console.log('Potential profitability:', profitability.toFixed(2) + '€');
 // 🎯 LAST TODO: Save in localStorage
 // 1. Save MY_FAVORITE_DEALERS in the localStorage
 // 2. log the localStorage
+
+localStorage.setItem('MY_FAVORITE_DEALERS', JSON.stringify(MY_FAVORITE_DEALERS));
+console.log('localStorage contents:', localStorage);
+console.log('Saved MY_FAVORITE_DEALERS:', JSON.parse(localStorage.getItem('MY_FAVORITE_DEALERS')));
