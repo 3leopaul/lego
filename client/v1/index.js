@@ -558,6 +558,17 @@ const deal = {
 // 1. Compute the potential highest profitability based on the VINTED items
 // 2. Log the value
 
+// Find the highest VINTED price for this set
+const vintedPrices = VINTED.map(item => parseFloat(item.price));
+const highestVintedPrice = Math.max(...vintedPrices);
+
+// Calculate profitability: selling price - buying price
+const profitability = highestVintedPrice - deal.price;
+
+console.log('Deal purchase price:', deal.price + '€');
+console.log('Highest VINTED resale price:', highestVintedPrice + '€');
+console.log('Potential profitability:', profitability.toFixed(2) + '€');
+
 
 
 /**
