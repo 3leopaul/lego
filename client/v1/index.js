@@ -146,6 +146,13 @@ console.log('Number of deals by community:', dealCountByCommunity);
 // 1. For each community, sort the deals by discount price, from highest to lowest
 // 2. Log the sort
 
+const communitiesSortedByPrice = Object.keys(communities).reduce((acc, communityName) => {
+  acc[communityName] = communities[communityName].slice().sort((a, b) => b.price - a.price);
+  return acc;
+}, {});
+
+console.log('Communities with deals sorted by price (highest to lowest):', communitiesSortedByPrice);
+
 // 🎯 TODO 10: Sort by date for each community
 // 1. For each set, sort the deals by date, from old to recent
 // 2. Log the sort
